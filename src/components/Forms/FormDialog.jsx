@@ -7,6 +7,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import TextInput from './TextInput';
 import { useState } from 'react';
 
+
 const FormDialog = (props) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -21,29 +22,33 @@ const FormDialog = (props) => {
    const inputDescription = (event) =>{
       setDescription(event.target.value)
     }
+  
     
   const submitForm = () =>{
     const payload = {
-      text: 'You got a contact from chatbot\n' + 
+      text: 'You got a request from chatbot\n' + 
             'name: ' + name + '\n' +
             'email: ' + email + '\n' +
-            'description: \n' + description
+            'request: \n' + description
           }
-    const SLACK_API = process.env.REACT_APP_SLACK_API
-    const url = SLACK_API
+    const SLACK_URL = process.env.REACT_APP_SLACK
+    const url = SLACK_URL
     fetch(url, {
       method:'POST',
       body:JSON.stringify(payload)
     }).then(() => {
-      alert('Send your message. Thank you.')
+   alert('Your request has been sent successfully.Thank you.')
      setName('')
      setEmail('')
      setDescription('')
-      return props.handleClose()
+    return (
+      props.handleClose()
+      )
     })
   }
 
 return(
+  <>
    <Dialog
         open={props.open}
         onClose={props.handleClose}
@@ -51,7 +56,7 @@ return(
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">
-         Contact to me
+        Request a blog post
         </DialogTitle>
         <DialogContent>
        <TextInput 
@@ -71,7 +76,7 @@ return(
         onChange={inputEmail}
        />
        <TextInput 
-        label={'Inquiry'}
+        label={'Request'}
         multiline={true}
         rows={5}
         value={description}
@@ -86,6 +91,9 @@ return(
           </Button>
         </DialogActions>
       </Dialog>
+  
+
+     </>
         )
 }
 export default FormDialog;
