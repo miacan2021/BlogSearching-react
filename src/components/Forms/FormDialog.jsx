@@ -29,7 +29,8 @@ const FormDialog = (props) => {
             'email: ' + email + '\n' +
             'description: \n' + description
           }
-    const url = '#'
+    const SLACK_API = process.env.REACT_APP_SLACK_API
+    const url = SLACK_API
     fetch(url, {
       method:'POST',
       body:JSON.stringify(payload)
