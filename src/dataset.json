@@ -1,0 +1,80 @@
+{
+    "init": {
+        "answers": [
+            {"content": "Living in Vancouver", "nextId": "living"},
+            {"content": "About traveling to Canada", "nextId": "consultant"},
+            {"content": "Money transfer and other money-related matters", "nextId": "community"},
+            {"content": "Request an article", "nextId": "dating"}
+        ],
+        "question": "Hello! What kind of content are you interested in blog posts about?"
+    },
+    "living": {
+        "answers": [
+            {"content": "I want to send a parcel from Japan to Canada.", "nextId": "parcel"},
+            {"content": "I'd like to know how to see a doctor in Vancouver.", "nextId": "clinic"},
+            {"content": "What should I bring from Japan to study abroad?", "nextId": "belongings"},
+            {"content": "I want to know about the rules of living in vancouver.", "nextId": "other_jobs"}
+        ],
+        "question": "What kind of content are you interested in?"
+    },
+    "parcel": {
+        "answers": [
+            {"content": "Check out the article", "nextId": "https://s-scarlet.com/2021/07/06/%e6%97%a5%e6%9c%ac%e3%81%8b%e3%82%89%e3%82%ab%e3%83%8a%e3%83%80%e3%81%ab%e8%8d%b7%e7%89%a9%e3%82%92%e9%80%81%e3%82%8b%e6%96%b9%e6%b3%95%ef%bc%882021%e5%b9%b46%e6%9c%88%ef%bc%89/"},
+            {"content": "Return to living in Vancouver category.", "nextId": "living"},
+            {"content": "Back to the first question", "nextId": "init"}
+        ],
+        "question": "I wrote an article on how to send parcels from Japan, please check it out."
+    },
+    "clinic": {
+        "answers": [
+            {"content": "問い合わせる", "nextId": "contact"},
+            {"content": "最初の質問に戻る", "nextId": "init"}
+        ],
+        "question": "Webアプリ開発についてですね。コチラからお問い合わせできます。"
+    },
+    "belongings": {
+        "answers": [
+            {"content": "問い合わせる", "nextId": "contact"},
+            {"content": "最初の質問に戻る", "nextId": "init"}
+        ],
+        "question": "自動化ツール開発についてですね。コチラからお問い合わせできます。"
+    },
+    "other_jobs": {
+        "answers": [
+            {"content": "問い合わせる", "nextId": "contact"},
+            {"content": "最初の質問に戻る", "nextId": "init"}
+        ],
+        "question": "その他についてですね。コチラからお問い合わせできます。"
+    },
+    "consultant": {
+        "answers": [
+            {"content": "YouTubeで動画を見る", "nextId": "https://www.youtube.com/channel/UC-bOAxx-YOsviSmqh8COR0w"},
+            {"content": "学習コミュニティについて知りたい", "nextId": "community"},
+            {"content": "最初の質問に戻る", "nextId": "init"}
+        ],
+        "question": "トラハックは普段からYouTubeでキャリアについて発信しています。また、僕が運営するエンジニア向け学習コミュニティ内でも相談に乗っていますよ。"
+    },
+    "community": {
+        "answers": [
+            {"content": "どんな活動をしているの？", "nextId": "community_activity"},
+            {"content": "コミュニティに参加したい", "nextId": "https://torahack.web.app/community/"},
+            {"content": "最初の質問に戻る", "nextId": "init"}
+        ],
+        "question": "2020年3月から学習コミュニティを始めました！🎉Webエンジニアへの転職を目指す人向けに、プログラミングを教えたりキャリアの相談に乗っています。"
+    },
+    "community_activity": {
+        "answers": [
+            {"content": "さらに詳細を知りたい", "nextId": "https://youtu.be/tIzE7hUDbBM"},
+            {"content": "コミュニティに参加したい", "nextId": "https://torahack.web.app/community/"},
+            {"content": "最初の質問に戻る", "nextId": "init"}
+        ],
+        "question": "フロントエンド向けの教材の提供、キャリアや勉強法に関するメルマガの配信、週1のオンライン作業会などを開催しています！\n詳細はYouTube動画で紹介しています。"
+    },
+    "dating": {
+        "answers": [
+            {"content": "DMする", "nextId": "https://twitter.com/torahack_"},
+            {"content": "最初の質問に戻る", "nextId": "init"}
+        ],
+        "question": "まずは一緒にランチでもいかがですか？DMしてください😘"
+    }
+}

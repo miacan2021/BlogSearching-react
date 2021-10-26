@@ -1,0 +1,110 @@
+.c-section {
+    position: relative;
+    height: 100vh;
+    width: 49%;
+    float: left;
+}
+
+.c-box {
+    background: #fff;
+    border-radius: 4px;
+    height: 80vh;
+    max-width: 500px;
+    padding: 1rem 2rem;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.c-grid__answer {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    height: 180px;
+}
+
+
+.p-chat__bubble_question {
+    position:relative;
+    max-width: 80%;
+    width: auto;
+    background:#F5EAED;
+    padding:20px;
+    text-align:left;
+    color:#333333;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius:15px;
+}
+.p-chat__bubble_question:after{
+    border: solid transparent;
+    content:'';
+    height:0;
+    width:0;
+    pointer-events:none;
+    position:absolute;
+    border-top-width:8px;
+    border-bottom-width:8px;
+    border-left-width:8px;
+    border-right-width:8px;
+    margin-top: -10px;
+    border-right-color:#F5EAED;
+    right:100%;
+    top:50%;
+}
+.p-chat__bubble_answer {
+    position:relative;
+    max-width: 80%;
+    width: auto;
+    background:#F5EAED;
+    padding:20px;
+    text-align:left;
+    color:#333333;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius:15px;
+}
+.p-chat__bubble_answer:after{
+    border: solid transparent;
+    content:'';
+    height:0;
+    width:0;
+    pointer-events:none;
+    position:absolute;
+    border-top-width:8px;
+    border-bottom-width:8px;
+    border-left-width:8px;
+    border-right-width:8px;
+    margin-top: -10px;
+    border-left-color:#F5EAED;
+    left:100%;
+    top:50%;
+}
+
+.p-chat__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.p-chat__reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start !important;
+    gap: 10px;
+}
+
+
+.p-question__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+}
+
+.p-question__description {
+    font-size: 1rem;
+    letter-spacing: .125rem;
+    line-height: 1.7;
+}
