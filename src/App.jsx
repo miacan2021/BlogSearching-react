@@ -3,7 +3,7 @@ import React from 'react';
 import { useState, useEffect, useCallback } from 'react';
 import defaultDataset from './dataset';
 import './assets/styles/style.css';
-import { AnswersList, Chats, Nav, Articles} from './components';
+import { AnswersList, Chats, Articles, Hero} from './components';
 import FormDialog from './components/Forms/FormDialog';
 
 const App = (props) => {
@@ -77,7 +77,7 @@ useEffect(() => {
 
   return (
     <>
-   <Nav />
+   <Hero />
    <section className='c-section'>
      <div className='c-box'>
        <Chats chats={chats}/>

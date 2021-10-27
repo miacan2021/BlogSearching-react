@@ -9,11 +9,19 @@ import { styled } from '@mui/material/styles';
 
 
 const CustomNav = styled(AppBar)({
-    backgroundColor: '#ecd5dc',
-    color: 'white'
+    backgroundColor: 'transparent',
+    boxShadow: 'none',
+    color: '#fff',
   });
 
-export default function Nav() {
+const CustomButton = styled(Button)({
+  color: '#fff',
+  '&:hover': {
+    color:'pink',
+}
+})
+
+const Nav = () =>{
   return (
     <Box sx={{ flexGrow: 1 }}>
       <CustomNav position="static">
@@ -25,14 +33,15 @@ export default function Nav() {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-          
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Explore My Blog
           </Typography>
-          <Button href={"https://s-scarlet.com/"} target="_blank" color="inherit">See my blog</Button>
+          <CustomButton href={"https://s-scarlet.com/"} target="_blank" color="inherit">See my blog</CustomButton>
         </Toolbar>
       </CustomNav>
     </Box>
   );
 }
+
+export default Nav;

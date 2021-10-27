@@ -2,9 +2,9 @@
     "init": {
         "answers": [
             {"content": "Living in Vancouver as an International student", "nextId": "living"},
-            {"content": "About travelling to Canada during the pandemic", "nextId": "consultant"},
-            {"content": "Money transfer and other money-related matters", "nextId": "community"},
-            {"content": "Request an article", "nextId": "dating"}
+            {"content": "About travelling to Canada during the pandemic", "nextId": "travel"},
+            {"content": "Money transfer and other money-related matters", "nextId": "money"},
+            {"content": "Request an article", "nextId": "request"}
         ],
         "question": "Hello! Thank you for visiting for my website. What kind of contents are you interested in blog posts about?"
     },
@@ -28,54 +28,53 @@
     },
     "clinic": {
         "answers": [
-            {"content": "問い合わせる", "nextId": "contact"},
-            {"content": "最初の質問に戻る", "nextId": "init"}
+            {"content": "Check the article → ", "nextId": "https://s-scarlet.com/category/%e5%8c%bb%e7%99%82/"},
+            {"content": "Return to living in Vancouver category.", "nextId": "living"},
+            {"content": "Back to the first question", "nextId": "init"}
         ],
-        "question": "Webアプリ開発についてですね。コチラからお問い合わせできます。"
+        "question": "I wrote some articles about clinics. In Vancouver, you can also get a virtual consultation with a Japanese doctor! Check them out!"
     },
     "belongings": {
         "answers": [
-            {"content": "問い合わせる", "nextId": "contact"},
-            {"content": "最初の質問に戻る", "nextId": "init"}
+            {"content": "Check the article → ", "nextId": "https://s-scarlet.com/category/%e6%8c%81%e3%81%a1%e7%89%a9/"},
+            {"content": "Return to living in Vancouver category.", "nextId": "living"},
+            {"content": "Back to the first question", "nextId": "init"}
         ],
-        "question": "自動化ツール開発についてですね。コチラからお問い合わせできます。"
+        "question": "I wrote some articles about belongings and luggage. Check them out!"
     },
-    "other_jobs": {
+    "daily": {
         "answers": [
-            {"content": "問い合わせる", "nextId": "contact"},
-            {"content": "最初の質問に戻る", "nextId": "init"}
+            {"content": "About Smartphone sim card", "nextId": "https://s-scarlet.com/2021/03/11/%e3%82%b3%e3%83%ad%e3%83%8a%e7%a6%8d%e3%81%ae%e3%82%ab%e3%83%8a%e3%83%80%e7%95%99%e5%ad%a6%e3%80%81%e3%82%ab%e3%83%8a%e3%83%80%e3%81%ae%e6%90%ba%e5%b8%af%e9%9b%bb%e8%a9%b1%e3%81%ae%e7%95%aa%e5%8f%b7/"},
+            {"content": "About looking for a house ", "nextId": "https://s-scarlet.com/2021/04/11/%e7%a7%81%e3%81%8c%e3%83%90%e3%83%b3%e3%82%af%e3%83%bc%e3%83%90%e3%83%bc%e3%81%a7%e3%82%b7%e3%82%a7%e3%82%a2%e3%83%8f%e3%82%a6%e3%82%b9%e3%82%92%e6%8e%a2%e3%81%97%e3%80%81%e5%a5%91%e7%b4%84%e3%81%99/"},
+            {"content": "About BCID", "nextId": "https://s-scarlet.com/2021/09/24/bcid/"},
+            {"content": "Check all articles in the living category", "nextId": "https://s-scarlet.com/category/%e7%94%9f%e6%b4%bb/"},
+            {"content": "Back to the first question", "nextId": "init"}
         ],
-        "question": "その他についてですね。コチラからお問い合わせできます。"
+        "question": "I wrote some articles about living in Vancouver as an International student. Check them out!"
     },
-    "consultant": {
+    "travel": {
         "answers": [
-            {"content": "YouTubeで動画を見る", "nextId": "https://www.youtube.com/channel/UC-bOAxx-YOsviSmqh8COR0w"},
-            {"content": "学習コミュニティについて知りたい", "nextId": "community"},
-            {"content": "最初の質問に戻る", "nextId": "init"}
+            {"content": "I'd like to know the flow to travel to Canada during the pandemic.", "nextId": "https://s-scarlet.com/2021/03/11/%e3%82%b3%e3%83%ad%e3%83%8a%e7%a6%8d%e3%81%ae%e3%82%ab%e3%83%8a%e3%83%80%e6%b8%a1%e8%88%aa%e3%81%ae%e6%b5%81%e3%82%8c%e3%80%81%e5%bf%85%e8%a6%81%e6%9b%b8%e9%a1%9e%e3%81%aa%e3%81%a9%e3%81%ae%e3%83%ac/"},
+            {"content": "Check all articles in the enter category", "nextId": "https://s-scarlet.com/category/enter/"},
+            {"content": "Back to the first question", "nextId": "init"}
         ],
-        "question": "トラハックは普段からYouTubeでキャリアについて発信しています。また、僕が運営するエンジニア向け学習コミュニティ内でも相談に乗っていますよ。"
+        "question": "Now, in order to enter Canada as a student, you may need to go through different procedures than before. I have written an article about travel, please check it out."
     },
-    "community": {
+    "money": {
         "answers": [
-            {"content": "どんな活動をしているの？", "nextId": "community_activity"},
-            {"content": "コミュニティに参加したい", "nextId": "https://torahack.web.app/community/"},
-            {"content": "最初の質問に戻る", "nextId": "init"}
+            {"content": "What methods are available to send money from Japan to Canada?", "nextId": "https://s-scarlet.com/2021/03/28/%e3%80%90%e3%82%ab%e3%83%8a%e3%83%80%e7%95%99%e5%ad%a6%e3%80%91%e3%82%ab%e3%83%8a%e3%83%80%e3%83%89%e3%83%ab%e3%81%b8%e3%81%ae%e4%b8%a1%e6%9b%bf%e3%80%81%e9%80%81%e9%87%91%e3%81%af%e3%81%a9%e3%81%86/y"},
+            {"content": "I want to know how much it will take to live for a month in Vancouver.", "nextId": "https://s-scarlet.com/2021/06/11/%e3%80%90%e3%83%90%e3%83%b3%e3%82%af%e3%83%bc%e3%83%90%e3%83%bc%e7%95%99%e5%ad%a6%e7%94%9f%e6%b4%bb%e3%80%91%e4%b8%80%e3%83%b6%e6%9c%88%e3%81%ae%e7%94%9f%e6%b4%bb%e8%b2%bb%e3%81%af%e3%81%84%e3%81%8f/"},
+            {"content": "Check all articles in the money category", "nextId": "https://s-scarlet.com/category/%e3%81%8a%e9%87%91/"},
+            {"content": "Back to the first question", "nextId": "init"}
         ],
-        "question": "2020年3月から学習コミュニティを始めました！🎉Webエンジニアへの転職を目指す人向けに、プログラミングを教えたりキャリアの相談に乗っています。"
+        "question": "I'm using 'WISE' to transfer. I wrote some articles about money, check them out."
     },
-    "community_activity": {
+    "request": {
         "answers": [
-            {"content": "さらに詳細を知りたい", "nextId": "https://youtu.be/tIzE7hUDbBM"},
-            {"content": "コミュニティに参加したい", "nextId": "https://torahack.web.app/community/"},
-            {"content": "最初の質問に戻る", "nextId": "init"}
+            {"content": "I'd like to access your blog.", "nextId": "https://s-scarlet.com/"},
+            {"content": "I wanna send a request for an article!", "nextId": "contact"},
+            {"content": "Back to the first question", "nextId": "init"}
         ],
-        "question": "フロントエンド向けの教材の提供、キャリアや勉強法に関するメルマガの配信、週1のオンライン作業会などを開催しています！\n詳細はYouTube動画で紹介しています。"
-    },
-    "dating": {
-        "answers": [
-            {"content": "DMする", "nextId": "https://twitter.com/torahack_"},
-            {"content": "最初の質問に戻る", "nextId": "init"}
-        ],
-        "question": "まずは一緒にランチでもいかがですか？DMしてください😘"
+        "question": "I'm accepting ideas for my blog articles. Please send me ideas of yours!"
     }
 }

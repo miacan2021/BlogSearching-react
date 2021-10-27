@@ -9,7 +9,7 @@ import { styled } from '@mui/material/styles';
 import parse from "html-react-parser";
 
 const CustomCardContent = styled(CardContent)({
-   padding: '10px',
+    padding: '10px',
     overflow: 'hidden',
   });
 
@@ -18,6 +18,12 @@ const CustomTypo = styled(Typography)({
     textDecoration: 'none',
     fontFamily: 'Zen Maru Gothic',
     fontSize: '20px',
+    fontWeight: 'bold',
+  });
+const CustomTitle = styled(Typography)({
+    color: '#A8A194',
+    fontFamily: 'Zen Maru Gothic',
+    fontSize: '40px',
     fontWeight: 'bold',
   });
 
@@ -36,14 +42,13 @@ const Articles = () => {
     loadPosts();
 },[]);
 
-
    return(
        <>
-    <h1>Articles</h1>
+    <CustomTitle gutterBottom variant="h1" component="div">New Articles</CustomTitle>
     <Grid container spacing={2}>
     {posts.map((post, index) => (
-    <Grid item xs={12} md={6} lg={4}>
-    <Card sx={{ maxWidth: 400, maxHeight: 550 }}  key={index}>
+    <Grid item xs={12} md={6} lg={4} key={index}>
+    <Card sx={{ maxWidth: 400, maxHeight: 550 }}>
       <CardActionArea>
         <a href={post.link} style={{textDecoration: 'none'}} target="_blank" rel="noreferrer noopener">
         <CardMedia
@@ -53,14 +58,13 @@ const Articles = () => {
           alt="article-img"
         />
         <CustomCardContent>
-          <CustomTypo gutterBottom variant="h5" component="div">
         {post.title.rendered.length <= 35 ?
-         <p>{post.title.rendered}</p> : 
-         <p>{post.title.rendered.slice(0,30)+"…"}</p>}
-          </CustomTypo>
+        <CustomTypo gutterBottom variant="h5" component="div">{post.title.rendered}</CustomTypo> : 
+         <CustomTypo gutterBottom variant="h5" component="div">{post.title.rendered.slice(0,30)+"…"}</CustomTypo>
+         }
           <Typography variant="body2" color="text.secondary">
-        <p>{post.date}</p>
-        <p>{parse(post.content.rendered.slice(0,50)+"…")}</p>
+            {post.date}
+            {parse(post.content.rendered.slice(0,70)+"…")}
           </Typography>
         </CustomCardContent>
         </a>
