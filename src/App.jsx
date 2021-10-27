@@ -15,6 +15,7 @@ const App = () => {
   const [url, setUrl] = useState(dataset[currentId].url);
   const [title, setTitle] = useState(dataset[currentId].title);
   const [posts, setPosts] = useState([]);
+  const [checked, setChecked] = useState(true);
 
   useEffect(() => {
     async function loadPosts() {
@@ -24,12 +25,14 @@ const App = () => {
     }
     const posts = await response.json()
     setPosts(posts)
-}
+   setChecked(true);
+  }
     loadPosts()
-},[url]);
+    setChecked(false)
+  },[url]);
 
   const displayNextQuestion = (nextQuestionId, nextDataSet) => {
-    addChats({
+        addChats({
       text: dataset[nextQuestionId].question,
       type: 'question'
     })
@@ -103,7 +106,7 @@ useEffect(() => {
        </div>
    </section>
    <section className='c-section'>
-     <Articles posts={posts} title={title} id={currentId} />
+     <Articles posts={posts} title={title} checked={checked} />
    </section>
    </>
   );

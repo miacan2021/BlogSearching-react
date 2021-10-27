@@ -12,7 +12,6 @@ const FormDialog = (props) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [description, setDescription] = useState('');
-    
     const inputName = (event) =>{
       setName(event.target.value)
     }

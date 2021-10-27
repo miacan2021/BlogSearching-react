@@ -19,8 +19,8 @@
 
         ],
         "question": "What kind of contents are you interested in?",
-        "title": "There're money articles, you may be looking for...",
-        "url": "https://s-scarlet.com/wp-json/wp/v2/posts?_embed&categories=7&per_page=6"
+        "title": "Articles about living in Vancouver...",
+        "url": "https://s-scarlet.com/wp-json/wp/v2/posts?_embed&categories=14&per_page=6"
     },
     "parcel": {
         "answers": [
@@ -61,8 +61,8 @@
             {"content": "Back to the first question", "nextId": "init"}
         ],
         "question": "I wrote some articles about living in Vancouver as an International student. Check them out!",
-        "title": "There're money articles, you may be looking for...",
-        "url": "https://s-scarlet.com/wp-json/wp/v2/posts?_embed&categories=7&per_page=6"
+        "title": "Articles about everyday life in Vancouver you're looking for...",
+        "url": "https://s-scarlet.com/wp-json/wp/v2/posts?_embed&categories=20&per_page=6"
     },
     "travel": {
         "answers": [
@@ -71,8 +71,8 @@
             {"content": "Back to the first question", "nextId": "init"}
         ],
         "question": "Now, in order to enter Canada as a student, you may need to go through different procedures than before. I have written an article about travel, please check it out.",
-        "title": "There're money articles, you may be looking for...",
-        "url": "https://s-scarlet.com/wp-json/wp/v2/posts?_embed&categories=7&per_page=6"
+        "title": "Here is an article I wrote about traveling to Canada during a pandemic.",
+        "url": "https://s-scarlet.com/wp-json/wp/v2/posts?_embed&categories=11&per_page=6"
     },
     "money": {
         "answers": [

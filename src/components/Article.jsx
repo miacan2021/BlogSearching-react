@@ -6,6 +6,7 @@ import { CardActionArea } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import parse from "html-react-parser";
+import Grow from '@mui/material/Grow';
 
 const CustomCardContent = styled(CardContent)({
     padding: '10px',
@@ -20,13 +21,18 @@ const CustomTypo = styled(Typography)({
     fontWeight: 'bold',
   });
 
-
 const Article = (props => {
+  
    return(
        <>
-    <Grid container spacing={2}>
-    {props.posts.map((post, index) => (
+      <Grid container spacing={2}>
+        {props.posts.map((post, index) => (
     <Grid item xs={12} md={6} lg={4} key={index}>
+     <Grow
+    in={props.checked}
+    style={{ transformOrigin: '0 0 0' }}
+    {...(props.checked ? { timeout: 90 } : {})}
+  >
     <Card sx={{ maxWidth: 400, maxHeight: 550 }}>
       <CardActionArea>
         <a href={post.link} style={{textDecoration: 'none'}} target="_blank" rel="noreferrer noopener">
@@ -49,6 +55,7 @@ const Article = (props => {
         </a>
       </CardActionArea>
     </Card>
+    </Grow>
     </Grid>
        ))}
        </Grid>

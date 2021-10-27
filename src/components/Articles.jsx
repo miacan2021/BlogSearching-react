@@ -17,7 +17,7 @@ const Articles = (props => {
       {props.title}
       </CustomTitle>
     <Grid container spacing={2}>
-    <Article posts={props.posts} id={props.id} />
+    <Article posts={props.posts} checked={props.checked} />
     </Grid>
        </>
    )
