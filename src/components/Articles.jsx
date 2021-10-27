@@ -27,24 +27,30 @@ const CustomTitle = styled(Typography)({
     fontWeight: 'bold',
   });
 
-const Articles = () => {
-    const [posts, setPosts] = useState([]);
-    // const url = 'https://s-scarlet.com/wp-json/wp/v2/posts?_embed'
-    useEffect(() => {
+const Articles = (props) => {
+    const [posts, setPosts] = useState([])
+    const [url, setUrl] = useState(props.url)
+    const [title, setTitle] = useState(props.title)
+  useEffect(() => {
     async function loadPosts() {
-    const response = await fetch('https://s-scarlet.com/wp-json/wp/v2/posts?_embed&filter[posts_per_page]=1');
+    const response = await fetch(`${url}`)
     if(!response) {
         return;
     }
-    const posts = await response.json();
-    setPosts(posts);
+    const posts = await response.json()
+    setPosts(posts)
+    setTitle(props.title)
+    setUrl(props.url)
 }
     loadPosts();
-},[]);
+});
 
    return(
        <>
-    <CustomTitle gutterBottom variant="h1" component="div">New Articles</CustomTitle>
+    <CustomTitle gutterBottom variant="h1" component="div">
+      New Articles
+      {title}
+      </CustomTitle>
     <Grid container spacing={2}>
     {posts.map((post, index) => (
     <Grid item xs={12} md={6} lg={4} key={index}>

@@ -6,7 +6,9 @@
             {"content": "Money transfer and other money-related matters", "nextId": "money"},
             {"content": "Request an article", "nextId": "request"}
         ],
-        "question": "Hello! Thank you for visiting for my website. What kind of contents are you interested in blog posts about?"
+        "question": "Hello! Thank you for visiting for my website. What kind of contents are you interested in blog posts about?",
+        "title": "New Articles",
+        "url": "https://s-scarlet.com/wp-json/wp/v2/posts?_embed&per_page=6"
     },
     "living": {
         "answers": [
@@ -67,7 +69,9 @@
             {"content": "Check all articles in the money category", "nextId": "https://s-scarlet.com/category/%e3%81%8a%e9%87%91/"},
             {"content": "Back to the first question", "nextId": "init"}
         ],
-        "question": "I'm using 'WISE' to transfer. I wrote some articles about money, check them out."
+        "question": "I'm using 'WISE' to transfer. I wrote some articles about money, check them out.",
+        "title": "There're money articles, you may be looking for...",
+        "url": "https://s-scarlet.com/wp-json/wp/v2/posts?_embed&categories=7&per_page=6"
     },
     "request": {
         "answers": [

@@ -12,6 +12,8 @@ const App = (props) => {
   const [currentId, setCureentId] = useState('init');
   const [dataset] = useState(defaultDataset);
   const [open, setOpen] = useState(false);
+  const [url, setUrl] = useState(dataset[currentId].url);
+  const [title, setTitle] = useState(dataset[currentId].title);
 
   const displayNextQuestion = (nextQuestionId, nextDataSet) => {
     addChats({
@@ -20,6 +22,8 @@ const App = (props) => {
     })
       setAnswers(nextDataSet.answers)
       setCureentId(nextQuestionId)
+      setUrl(dataset[nextQuestionId].url)
+      setTitle(dataset[nextQuestionId].title)
     }
 
 
@@ -86,7 +90,7 @@ useEffect(() => {
        </div>
    </section>
    <section className='c-section'>
-     <Articles />
+     <Articles url={url} title={title} />
    </section>
    </>
   );
