@@ -6,7 +6,7 @@ import './assets/styles/style.css';
 import { AnswersList, Chats, Articles, Hero} from './components';
 import FormDialog from './components/Forms/FormDialog';
 
-const App = (props) => {
+const App = () => {
   const [answers, setAnswers] = useState([]);
   const [chats, setChats] = useState([]);
   const [currentId, setCureentId] = useState('init');
@@ -14,6 +14,19 @@ const App = (props) => {
   const [open, setOpen] = useState(false);
   const [url, setUrl] = useState(dataset[currentId].url);
   const [title, setTitle] = useState(dataset[currentId].title);
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    async function loadPosts() {
+    const response = await fetch(`${url}`)
+    if(!response) {
+        return;
+    }
+    const posts = await response.json()
+    setPosts(posts)
+}
+    loadPosts()
+},[url]);
 
   const displayNextQuestion = (nextQuestionId, nextDataSet) => {
     addChats({
@@ -90,7 +103,7 @@ useEffect(() => {
        </div>
    </section>
    <section className='c-section'>
-     <Articles url={url} title={title} />
+     <Articles posts={posts} title={title} id={currentId} />
    </section>
    </>
   );
