@@ -19,12 +19,7 @@ const CustomTypo = styled(Typography)({
     fontSize: '20px',
     fontWeight: 'bold',
   });
-const CustomTitle = styled(Typography)({
-    color: '#A8A194',
-    fontFamily: 'Zen Maru Gothic',
-    fontSize: '40px',
-    fontWeight: 'bold',
-  });
+
 
 const Article = (props => {
    return(
