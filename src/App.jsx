@@ -5,7 +5,6 @@ import defaultDataset from './dataset';
 import './assets/styles/style.css';
 import { AnswersList, Chats, Articles, Hero, About, Nav} from './components';
 import FormDialog from './components/Forms/FormDialog';
-import { Link as Scroll } from 'react-scroll';
 
 const App = () => {
   const [answers, setAnswers] = useState([]);
