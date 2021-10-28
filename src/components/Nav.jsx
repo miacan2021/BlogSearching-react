@@ -16,16 +16,16 @@ const CustomTypo = styled(Typography)({
     letterSpacing: '1.5px',
     color: '#2D2D2B',
     fontSize: '30px',
-    margin: '10px',
+    marginTop: '30px',
   });
   
-const Nav = () =>{
+const Nav = (props) =>{
   return (
     <Box sx={{ flexGrow: 1 }}>
       <CustomNav position="static">
         <Toolbar>
           <CustomTypo variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          FIND BLOG POSTS
+          {props.title}
           </CustomTypo>
         </Toolbar>
       </CustomNav>

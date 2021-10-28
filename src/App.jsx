@@ -3,7 +3,7 @@ import React from 'react';
 import { useState, useEffect, useCallback } from 'react';
 import defaultDataset from './dataset';
 import './assets/styles/style.css';
-import { AnswersList, Chats, Articles, Hero} from './components';
+import { AnswersList, Chats, Articles, Hero, About} from './components';
 import FormDialog from './components/Forms/FormDialog';
 
 const App = () => {
@@ -98,6 +98,7 @@ useEffect(() => {
   return (
     <>
    <Hero />
+   <About />
    <section className='c-section'>
      <div className='c-box'>
        <Chats chats={chats}/>

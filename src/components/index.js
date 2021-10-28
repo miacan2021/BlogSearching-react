@@ -5,4 +5,5 @@ export {default as Chat} from './Chat';
 export {default as Nav} from './Nav';
 export {default as Articles} from './Articles';
 export {default as Hero} from './Hero';
+export {default as About} from './AboutMe';
 
