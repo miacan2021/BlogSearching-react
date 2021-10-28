@@ -3,13 +3,14 @@ import { styled } from '@mui/material/styles';
 
 
 const CustomButton = styled(Button)({
-    borderColor: '#f8bbd0',
-    color: '#f06292',
+    borderColor: '#F6F0F1',
+    backgroundColor: '#F6F5F0',
+    color: '#2D2D2B',
     marginBottom: '10px',
     '&:hover': {
-        borderColor: 'gray',
-        backgroundColor: '#f8bbd0',
-        color: '#fff'
+        borderColor: '#C39E9E',
+        backgroundColor: '#F6F5F0',
+        color:'#C39E9E',
     },
   });
 

@@ -3,7 +3,7 @@ import {Chat} from './index'
 import { styled } from '@mui/material/styles';
 
 const ChatsArea = styled(List)({
-    height: "500px",
+    height: "460px",
     padding: "0",
     overflow: "auto"
   });

@@ -4,10 +4,9 @@ import { styled } from '@mui/material/styles';
 import Article from './Article';
 
 const CustomTitle = styled(Typography)({
-    color: '#A8A194',
-    fontFamily: 'Zen Maru Gothic',
-    fontSize: '40px',
-    fontWeight: 'bold',
+    color: '#2D2D2B',
+    fontFamily: 'M PLUS 1p',
+    fontSize: '30px',
   });
 
 const Articles = (props => {

@@ -3,7 +3,7 @@ import React from 'react';
 import { useState, useEffect, useCallback } from 'react';
 import defaultDataset from './dataset';
 import './assets/styles/style.css';
-import { AnswersList, Chats, Articles, Hero, About} from './components';
+import { AnswersList, Chats, Articles, Hero, About, Nav} from './components';
 import FormDialog from './components/Forms/FormDialog';
 
 const App = () => {
@@ -99,17 +99,22 @@ useEffect(() => {
     <>
    <Hero />
    <About />
-   <section className='c-section'>
+   <section className="find_blog">
+   <Nav title={'FIND ARTICLES'} />
+   <div className="find">
+   <div className='c-section'>
      <div className='c-box'>
        <Chats chats={chats}/>
        <AnswersList answers={answers} select={selectAnswer} />
        <FormDialog open={open} handleClose={handleClose} />
        </div>
-   </section>
-   <section className='d-section'>
+   </div>
+   <div className='d-section'>
    <div className='d-box'>
      <Articles posts={posts} title={title} checked={checked} />
      </div>
+   </div>
+   </div>
    </section>
    </>
   );

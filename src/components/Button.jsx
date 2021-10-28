@@ -18,7 +18,7 @@ const CustomBtn = styled(Button)({
 export default function Btn(props) {
   return (
     <Box textAlign='center'>
-      <CustomBtn variant="outlined">{props.name}</CustomBtn>
+      <CustomBtn variant="outlined" target='_blank' href={props.url}>{props.name}</CustomBtn>
     </Box>
   );
 }

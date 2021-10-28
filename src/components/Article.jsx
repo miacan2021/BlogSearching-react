@@ -10,25 +10,36 @@ import Grow from '@mui/material/Grow';
 
 const CustomCardContent = styled(CardContent)({
     padding: '10px',
-    overflow: 'hidden',
-  });
+    });
+
 const CustomCard = styled(Card)({
-   backgroundColor:'orange',
+   backgroundColor:'#F6F0F1',
+   height: '320px',
+   width: '260px',
+   borderRadius:0,
+
   });
 
 const CustomTypo = styled(Typography)({
-    color: '#A8A194',
+    color: '#C39E9E',
     textDecoration: 'none',
     fontFamily: 'Zen Maru Gothic',
-    fontSize: '20px',
+    fontSize: '18px',
     fontWeight: 'bold',
   });
-
+  const CustomGrid = styled(Grid)({
+    marginTop: '10px',
+  })
+  const CustomP = styled(Typography)({
+    color:'#C39E9E',
+    fontFamily: 'M PLUS 1p , sans-serif',
+    fontSize: '12px',
+  })
 const Article = (props => {
   
    return(
        <>
-      <Grid container spacing={2}>
+    <CustomGrid container spacing={1}>
         {props.posts.map((post, index) => (
     <Grid item xs={12} md={6} lg={4} key={index}>
      <Grow
@@ -36,12 +47,12 @@ const Article = (props => {
     style={{ transformOrigin: '0 0 0' }}
     {...(props.checked ? { timeout: 90 } : {})}
   >
-    <CustomCard sx={{ maxWidth: 350, maxHeight: 400 }}>
+    <CustomCard>
       <CardActionArea>
         <a href={post.link} style={{textDecoration: 'none'}} target="_blank" rel="noreferrer noopener">
         <CardMedia
           component="img"
-          height="140"
+          height="120"
           image={post._embedded['wp:featuredmedia'][0].source_url}
           alt="article-img"
         />
@@ -50,10 +61,10 @@ const Article = (props => {
         <CustomTypo gutterBottom variant="h5" component="div">{post.title.rendered}</CustomTypo> : 
          <CustomTypo gutterBottom variant="h5" component="div">{post.title.rendered.slice(0,30)+"…"}</CustomTypo>
          }
-          <Typography variant="body2" color="text.secondary">
+          <CustomP variant="body2" color="text.secondary">
             {post.date}
             {parse(post.content.rendered.slice(0,70)+"…")}
-          </Typography>
+          </CustomP>
         </CustomCardContent>
         </a>
       </CardActionArea>
@@ -61,7 +72,7 @@ const Article = (props => {
     </Grow>
     </Grid>
        ))}
-       </Grid>
+       </CustomGrid>
        </>
    )
 })

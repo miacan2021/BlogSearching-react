@@ -1,16 +1,27 @@
-.c-section {
-    position: relative;
+.find_blog{
     height: 100vh;
+    width: 100vw;
+    background-color: #F6F5F0;
+}
+.find{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+.c-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     width: 49vw;
-    float: left;
-    background-color: pink;
 }
 .d-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    height: 100vh;
     width: 50vw;
-    float: left;
-    background-color: blue;
 }
 
 .c-box {
@@ -20,24 +31,17 @@
     max-width: 500px;
     padding: 1rem 2rem;
     width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 .d-box {
-    background: black;
     border-radius: 4px;
-    height: 100vh;
+    height: 80vh;
     padding: 1rem 2rem;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: scroll;
+    width: 90%;
+    overflow-y: scroll;
 }
-
+.d-box::-webkit-scrollbar {
+    display:none;
+}
 .c-grid__answer {
     display: flex;
     flex-flow: column;
@@ -50,10 +54,10 @@
     position:relative;
     max-width: 80%;
     width: auto;
-    background:#F5EAED;
+    background:#F0E4D8;
     padding:20px;
     text-align:left;
-    color:#333333;
+    color:#2D2D2B;
     font-size: 14px;
     font-weight: 500;
     border-radius:15px;
@@ -70,7 +74,7 @@
     border-left-width:8px;
     border-right-width:8px;
     margin-top: -10px;
-    border-right-color:#F5EAED;
+    border-right-color:#F0E4D8;
     right:100%;
     top:50%;
 }
@@ -78,10 +82,10 @@
     position:relative;
     max-width: 80%;
     width: auto;
-    background:#F5EAED;
+    background:#F6F0F1;
     padding:20px;
     text-align:left;
-    color:#333333;
+    color:#2D2D2B;
     font-size: 14px;
     font-weight: 500;
     border-radius:15px;
@@ -98,7 +102,7 @@
     border-left-width:8px;
     border-right-width:8px;
     margin-top: -10px;
-    border-left-color:#F5EAED;
+    border-left-color:#F6F0F1;
     left:100%;
     top:50%;
 }

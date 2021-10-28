@@ -17,7 +17,7 @@ const Sction = styled.div`
            title={'SHIHO'} 
            contents={'I am a Japanese international student living in Vancouver, studying web development.I run a blog to share tips and information about life as an international student in Vancouver for Japanese people who are living or planning to live in Vancouver.My blog has a 6K page view a month now. I would like to say, I am a blogger.'}
            img={AboutImg} />
-             <Btn name={'TRY TO FIND ARTICLES'} />
+             <Btn name={'ACCESS TO BLOG'} target='_blank' url={'https://s-scarlet.com/'} />
         </Sction>
     
     )
