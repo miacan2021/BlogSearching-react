@@ -12,6 +12,9 @@ const CustomCardContent = styled(CardContent)({
     padding: '10px',
     overflow: 'hidden',
   });
+const CustomCard = styled(Card)({
+   backgroundColor:'orange',
+  });
 
 const CustomTypo = styled(Typography)({
     color: '#A8A194',
@@ -33,7 +36,7 @@ const Article = (props => {
     style={{ transformOrigin: '0 0 0' }}
     {...(props.checked ? { timeout: 90 } : {})}
   >
-    <Card sx={{ maxWidth: 400, maxHeight: 550 }}>
+    <CustomCard sx={{ maxWidth: 350, maxHeight: 400 }}>
       <CardActionArea>
         <a href={post.link} style={{textDecoration: 'none'}} target="_blank" rel="noreferrer noopener">
         <CardMedia
@@ -54,7 +57,7 @@ const Article = (props => {
         </CustomCardContent>
         </a>
       </CardActionArea>
-    </Card>
+    </CustomCard>
     </Grow>
     </Grid>
        ))}

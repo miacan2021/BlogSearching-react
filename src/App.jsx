@@ -105,8 +105,10 @@ useEffect(() => {
        <FormDialog open={open} handleClose={handleClose} />
        </div>
    </section>
-   <section className='c-section'>
+   <section className='d-section'>
+   <div className='d-box'>
      <Articles posts={posts} title={title} checked={checked} />
+     </div>
    </section>
    </>
   );

@@ -1,20 +1,16 @@
-.hero{
-    width: 100wh;
-    height: 100vh;
-    /* background-image: url(../img/hero.jpg);
-    background-position: center center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: contain; */
-    background-color: #A8A194;
-}
-
 .c-section {
     position: relative;
     height: 100vh;
-    width: 49%;
+    width: 49vw;
     float: left;
+    background-color: pink;
+}
+.d-section {
+    position: relative;
+    height: 100vh;
+    width: 50vw;
+    float: left;
+    background-color: blue;
 }
 
 .c-box {
@@ -28,6 +24,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.d-box {
+    background: black;
+    border-radius: 4px;
+    height: 100vh;
+    padding: 1rem 2rem;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: scroll;
 }
 
 .c-grid__answer {

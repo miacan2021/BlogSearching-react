@@ -3,41 +3,30 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
 import { styled } from '@mui/material/styles';
 
 
 const CustomNav = styled(AppBar)({
     backgroundColor: 'transparent',
     boxShadow: 'none',
-    color: '#fff',
+    textAlign:'center',
   });
-
-const CustomButton = styled(Button)({
-  color: '#fff',
-  '&:hover': {
-    color:'pink',
-}
-})
-
+const CustomTypo = styled(Typography)({
+    fontFamily:'Roboto',
+    letterSpacing: '1.5px',
+    color: '#2D2D2B',
+    fontSize: '30px',
+    margin: '10px',
+  });
+  
 const Nav = () =>{
   return (
     <Box sx={{ flexGrow: 1 }}>
       <CustomNav position="static">
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Explore My Blog
-          </Typography>
-          <CustomButton href={"https://s-scarlet.com/"} target="_blank" color="inherit">See my blog</CustomButton>
+          <CustomTypo variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          FIND BLOG POSTS
+          </CustomTypo>
         </Toolbar>
       </CustomNav>
     </Box>
