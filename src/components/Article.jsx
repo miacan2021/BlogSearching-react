@@ -14,8 +14,8 @@ const CustomCardContent = styled(CardContent)({
 
 const CustomCard = styled(Card)({
    backgroundColor:'#F6F0F1',
-   height: '320px',
-   width: '260px',
+   height: '310px',
+   width: '220px',
    borderRadius:0,
 
   });
@@ -24,7 +24,7 @@ const CustomTypo = styled(Typography)({
     color: '#C39E9E',
     textDecoration: 'none',
     fontFamily: 'Zen Maru Gothic',
-    fontSize: '18px',
+    fontSize: '16px',
     fontWeight: 'bold',
   });
   const CustomGrid = styled(Grid)({
@@ -59,11 +59,11 @@ const Article = (props => {
         <CustomCardContent>
         {post.title.rendered.length <= 35 ?
         <CustomTypo gutterBottom variant="h5" component="div">{post.title.rendered}</CustomTypo> : 
-         <CustomTypo gutterBottom variant="h5" component="div">{post.title.rendered.slice(0,30)+"…"}</CustomTypo>
+         <CustomTypo gutterBottom variant="h5" component="div">{post.title.rendered.slice(0,25)+"…"}</CustomTypo>
          }
           <CustomP variant="body2" color="text.secondary">
             {post.date}
-            {parse(post.content.rendered.slice(0,70)+"…")}
+            {parse(post.content.rendered.slice(0,50)+"…")}
           </CustomP>
         </CustomCardContent>
         </a>

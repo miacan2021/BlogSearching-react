@@ -5,6 +5,7 @@ import defaultDataset from './dataset';
 import './assets/styles/style.css';
 import { AnswersList, Chats, Articles, Hero, About, Nav} from './components';
 import FormDialog from './components/Forms/FormDialog';
+import { Link as Scroll } from 'react-scroll';
 
 const App = () => {
   const [answers, setAnswers] = useState([]);
@@ -99,7 +100,7 @@ useEffect(() => {
     <>
    <Hero />
    <About />
-   <section className="find_blog">
+   <section className="find_blog" id="find">
    <Nav title={'FIND ARTICLES'} />
    <div className="find">
    <div className='c-section'>
@@ -116,6 +117,7 @@ useEffect(() => {
    </div>
    </div>
    </section>
+
    </>
   );
 }
