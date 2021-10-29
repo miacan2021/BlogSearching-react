@@ -62,7 +62,7 @@ const Article = (props => {
          <CustomTypo gutterBottom variant="h5" component="div">{post.title.rendered.slice(0,25)+"…"}</CustomTypo>
          }
           <CustomP variant="body2" color="text.secondary">
-            {post.date}
+           ≈
             {parse(post.content.rendered.slice(0,50)+"…")}
           </CustomP>
         </CustomCardContent>

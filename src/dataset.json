@@ -74,7 +74,7 @@
     },
     "money": {
         "answers": [
-            {"content": "What methods are available to send money from Japan to Canada?", "nextId": "https://s-scarlet.com/2021/03/28/%e3%80%90%e3%82%ab%e3%83%8a%e3%83%80%e7%95%99%e5%ad%a6%e3%80%91%e3%82%ab%e3%83%8a%e3%83%80%e3%83%89%e3%83%ab%e3%81%b8%e3%81%ae%e4%b8%a1%e6%9b%bf%e3%80%81%e9%80%81%e9%87%91%e3%81%af%e3%81%a9%e3%81%86/y"},
+            {"content": "What methods are available to send money from Japan to Canada?", "nextId": "https://s-scarlet.com/2021/03/28/%e3%80%90%e3%82%ab%e3%83%8a%e3%83%80%e7%95%99%e5%ad%a6%e3%80%91%e3%82%ab%e3%83%8a%e3%83%80%e3%83%89%e3%83%ab%e3%81%b8%e3%81%ae%e4%b8%a1%e6%9b%bf%e3%80%81%e9%80%81%e9%87%91%e3%81%af%e3%81%a9%e3%81%86/"},
             {"content": "I want to know how much it will take to live for a month in Vancouver.", "nextId": "https://s-scarlet.com/2021/06/11/%e3%80%90%e3%83%90%e3%83%b3%e3%82%af%e3%83%bc%e3%83%90%e3%83%bc%e7%95%99%e5%ad%a6%e7%94%9f%e6%b4%bb%e3%80%91%e4%b8%80%e3%83%b6%e6%9c%88%e3%81%ae%e7%94%9f%e6%b4%bb%e8%b2%bb%e3%81%af%e3%81%84%e3%81%8f/"},
             {"content": "Back to the first question", "nextId": "init"}
         ],
