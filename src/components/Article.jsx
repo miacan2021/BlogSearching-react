@@ -45,7 +45,7 @@ const Article = (props => {
      <Grow
     in={props.checked}
     style={{ transformOrigin: '0 0 0' }}
-    {...(props.checked ? { timeout: 90 } : {})}
+    {...(props.checked ? { timeout: 500 } : {})}
   >
     <CustomCard>
       <CardActionArea>

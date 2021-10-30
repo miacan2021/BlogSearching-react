@@ -3,7 +3,8 @@ import React from 'react';
 import { useState, useEffect, useCallback } from 'react';
 import defaultDataset from './dataset';
 import './assets/styles/style.css';
-import { AnswersList, Chats, Articles, Hero, About, Nav} from './components';
+import './assets/styles/three-dots.css';
+import { AnswersList, Chats, Articles, Hero, About, Nav, Loading} from './components';
 import FormDialog from './components/Forms/FormDialog';
 
 const App = () => {
@@ -16,8 +17,11 @@ const App = () => {
   const [title, setTitle] = useState(dataset[currentId].title);
   const [posts, setPosts] = useState([]);
   const [checked, setChecked] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true)
+    setChecked(false)
     async function loadPosts() {
     const response = await fetch(`${url}`)
     if(!response) {
@@ -25,10 +29,10 @@ const App = () => {
     }
     const posts = await response.json()
     setPosts(posts)
-   setChecked(true);
-  }
+    setLoading(false)
+    setChecked(true)
+    }
     loadPosts()
-    setChecked(false)
   },[url]);
 
   const displayNextQuestion = (nextQuestionId, nextDataSet) => {
@@ -111,7 +115,7 @@ useEffect(() => {
    </div>
    <div className='d-section'>
    <div className='d-box'>
-     <Articles posts={posts} title={title} checked={checked} />
+     {loading ? <Loading /> : <Articles posts={posts} title={title} checked={checked} />}
      </div>
    </div>
    </div>
